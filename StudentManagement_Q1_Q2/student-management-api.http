@@ -1,0 +1,41 @@
+### Add a student
+POST http://localhost:8080/api/students
+Content-Type: application/json
+
+
+  {
+    "studentId": 101,
+    "studentName": "Aarav Sharma",
+    "emailAddress": "aarav@example.com",
+    "courseName": "BTech IT",
+    "programmingScore": 88,
+    "mathematicsScore": 92,
+    "technicalSkills": [
+      "Java",
+      "Python",
+      "SQL"
+    ]
+  }
+
+
+### Retrieve all students
+GET http://localhost:8080/api/students
+
+### Search student by ID
+GET http://localhost:8080/api/students/101
+
+### Update scores and skills
+PUT http://localhost:8080/api/students/101/scores-skills
+Content-Type: application/json
+
+{
+  "programmingScore": 95,
+  "mathematicsScore": 91,
+  "technicalSkills": ["Java", "Spring Boot", "MySQL"]
+}
+
+### Delete student
+DELETE http://localhost:8080/api/students/101
+
+### Display merit list
+GET http://localhost:8080/api/students/merit-list
